@@ -1,0 +1,263 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Verdana', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  color: #ffffff;
+  background: #0c0c0c;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background: rgba(12, 12, 12, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+nav .logo {
+  font-size: 28px;
+  color: #f0131e;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f0131e;
+}
+
+/* Section Styling */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 20px;
+  min-height: 100vh;
+  text-align: left;
+}
+
+.section .content, .section .image {
+  flex: 1;
+  padding: 20px;
+}
+
+.section .image img {
+  width: 100%;
+}
+
+/* Hero Section - Avengers Team */
+.avengers-team {
+  background: #1a1a1a;
+}
+
+.avengers-team .content h2 {
+  font-size: 3rem;
+  color: #f0131e;
+}
+
+
+/* Individual Avenger Sections with Theme Colors */
+.iron-man { background: #2d2d2d; border-color: #f0131e; }
+.captain-america { background: #1c3d5a; border-color: #2a75bb; }
+.thor { background: #3a3a3a; border-color: #a3c6ff; }
+.black-widow { background: #181818; border-color: #c40233; }
+
+.spider-man { background: #2d2d2d; border-color: #d80c0c; }
+.hulk { background: #1c3d1a; border-color: #4caf50; }
+.dr-strange { background: #26214a; border-color: #a084ff; }
+.black-panther { background: #0d0d0d; border-color: #9e9e9e; }
+
+/* Reverse layout for alternating sections */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text and Button Styling */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  color: #0c0c0c;
+  background-color: #f0131e;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #d11018;
+  transform: scale(1.05);
+}
+
+
+/* Glowing Shadow Effect on PNG Image Hover (More Glowing) */
+.section .image img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid transparent; /* Prevent border affecting hover effect */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.section .image img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  filter: drop-shadow(0 0 30px rgba(240, 19, 30, 0.8)); /* Default intense red glow */
+}
+
+/* Specific Glow Colors for Each Superhero */
+.iron-man .image img:hover {
+  filter: drop-shadow(0 0 30px rgba(240, 19, 30, 0.8)); /* Iron Man Red */
+}
+
+.captain-america .image img:hover {
+  filter: drop-shadow(0 0 30px rgba(42, 117, 187, 0.8)); /* Captain America Blue */
+}
+
+.thor .image img:hover {
+  filter: drop-shadow(0 0 30px rgba(163, 198, 255, 0.8)); /* Thor Blue */
+}
+
+.black-widow .image img:hover {
+  filter: drop-shadow(0 0 30px rgba(196, 2, 51, 0.8)); /* Black Widow Red */
+}
+
+.spider-man .image img:hover {
+  filter: drop-shadow(0 0 30px rgba(216, 12, 12, 0.8)); /* Spider-Man Red */
+}
+
+.hulk .image img:hover {
+  filter: drop-shadow(0 0 30px rgba(76, 175, 80, 0.8)); /* Hulk Green */
+}
+
+.dr-strange .image img:hover {
+  filter: drop-shadow(0 0 30px rgba(160, 132, 255, 0.8)); /* Dr. Strange Purple */
+}
+
+.black-panther .image img:hover {
+  filter: drop-shadow(0 0 30px rgba(158, 158, 158, 0.8)); /* Black Panther Grey */
+}
+
+
+/* Styling for the lists inside superhero sections */
+.section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.section ul li {
+  margin: 10px 0;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.section .content p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+
+/* Stronger Glowing Text Effect on Hover */
+.section .content h2, 
+.section .content p, 
+.section .content ul li {
+  transition: text-shadow 0.3s ease;
+}
+
+.section .content h2:hover,
+.section .content p:hover,
+.section .content ul li:hover {
+  text-shadow: 0 0 20px rgba(240, 19, 30, 1), 0 0 40px rgba(240, 19, 30, 0.9), 0 0 60px rgba(240, 19, 30, 0.8); /* Stronger red glow */
+}
+
+/* Specific Glow for Each Superhero (More Intense) */
+.iron-man .content h2:hover,
+.iron-man .content p:hover,
+.iron-man .content ul li:hover {
+  text-shadow: 0 0 20px rgba(240, 19, 30, 1), 0 0 40px rgba(240, 19, 30, 0.9), 0 0 60px rgba(240, 19, 30, 0.8); /* Iron Man Red */
+}
+
+.captain-america .content h2:hover,
+.captain-america .content p:hover,
+.captain-america .content ul li:hover {
+  text-shadow: 0 0 20px rgba(42, 117, 187, 1), 0 0 40px rgba(42, 117, 187, 0.9), 0 0 60px rgba(42, 117, 187, 0.8); /* Captain America Blue */
+}
+
+.thor .content h2:hover,
+.thor .content p:hover,
+.thor .content ul li:hover {
+  text-shadow: 0 0 20px rgba(163, 198, 255, 1), 0 0 40px rgba(163, 198, 255, 0.9), 0 0 60px rgba(163, 198, 255, 0.8); /* Thor Blue */
+}
+
+.black-widow .content h2:hover,
+.black-widow .content p:hover,
+.black-widow .content ul li:hover {
+  text-shadow: 0 0 20px rgba(196, 2, 51, 1), 0 0 40px rgba(196, 2, 51, 0.9), 0 0 60px rgba(196, 2, 51, 0.8); /* Black Widow Red */
+}
+
+.spider-man .content h2:hover,
+.spider-man .content p:hover,
+.spider-man .content ul li:hover {
+  text-shadow: 0 0 20px rgba(216, 12, 12, 1), 0 0 40px rgba(216, 12, 12, 0.9), 0 0 60px rgba(216, 12, 12, 0.8); /* Spider-Man Red */
+}
+
+.hulk .content h2:hover,
+.hulk .content p:hover,
+.hulk .content ul li:hover {
+  text-shadow: 0 0 20px rgba(76, 175, 80, 1), 0 0 40px rgba(76, 175, 80, 0.9), 0 0 60px rgba(76, 175, 80, 0.8); /* Hulk Green */
+}
+
+.dr-strange .content h2:hover,
+.dr-strange .content p:hover,
+.dr-strange .content ul li:hover {
+  text-shadow: 0 0 20px rgba(160, 132, 255, 1), 0 0 40px rgba(160, 132, 255, 0.9), 0 0 60px rgba(160, 132, 255, 0.8); /* Dr. Strange Purple */
+}
+
+.black-panther .content h2:hover,
+.black-panther .content p:hover,
+.black-panther .content ul li:hover {
+  text-shadow: 0 0 20px rgba(158, 158, 158, 1), 0 0 40px rgba(158, 158, 158, 0.9), 0 0 60px rgba(158, 158, 158, 0.8); /* Black Panther Grey */
+}
+
